@@ -12,13 +12,13 @@ Oder nach einer gewissen anzahl an Runden hat der mit mehr Leben gewonnen. zb: 1
 Karten können 2 Zustände haben verdeckt oder nicht verdeckt
 
 Es gibt drei Arten von Karten:
-1.Kämpfer-Karte (Die Karten haben Angriffs und Lebenspunkte. )
-2.Zauber-Karte (Können Effekte auslösen wie zum beispiel eine Karte bekommt 20% mehr angriff)
-3.Fallen-Karte (Die Karten werden Fallen ausrufen wie zum beispiel )
+1.Kämpfer-Karte (Haben Angriffs und Lebenspunkte)
+2.Zauber-Karte (Können Effekte auslösen wie zB eine Kämpfer-Karte bekommt 20% mehr Angriff)
+3.Fallen-Karte (Rufen Fallen aus wie zB ein Angriff wird reflektiert)
 
 Es gibt drei Stufen von Karten:
-1.Lägender-Karte (Kommen nur sehr selten im Spiel vor)
-2.Mythisch-Karte (Kommen schon häufiger vor aber sind immernoch besonders)
-3.Gewöhnlich-Karte (Es sind Standard Karten und es zeichnet Sie nichts besonderes aus) 
+1.Lägender-Karte (Sehr Selten)
+2.Mythisch-Karte (Selten)
+3.Gewöhnlich-Karte (Normal) 
 
-Karten können 2 Zustände haben verdeckt oder nicht verdeckt
+
