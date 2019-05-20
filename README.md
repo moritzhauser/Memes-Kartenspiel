@@ -18,8 +18,8 @@ Man kann nur Fallenkarten verdecken
 
 Es gibt drei Arten von Karten:
 1.Kämpfer-Karten (Haben Angriffs und Lebenspunkte)
-2.Zauber-Karten (Können Effekte auslösen wie zB eine Kämpfer-Karte bekommt 20% mehr Angriff)
-3.Fallen-Karten (Rufen Fallen aus wie zB ein Angriff wird reflektiert)
+2.Zauber-Karten (Können Effekte auslösen die einer eigenen Fighter Karte Leben gibt.)
+3.Fallen-Karten (Können Effekte auslösen die einer gegnerischen Fighter Karte leben abzieht.)
 
 Es gibt drei Stufen von Karten:
 1.Legendäre Karten (Sehr Selten)
