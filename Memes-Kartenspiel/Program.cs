@@ -22,10 +22,18 @@ namespace Memes_Kartenspiel
 
 
 
-            //Karten erstellen mahchen wir dann aus Dateien
+            //Karten erstellen machen wir dann aus Dateien
 
             Karten Thanos = new Karten() { Lebenspunkte = 50, attack1 = 20, attack2 = 20 };//prozent von Gegner leben zb
-      
+            string allesdatei; //=aus datei lesen 
+            List<string> Splitlist = new List<string>();
+            Splitlist = allesdatei.Split(' ');
+            foreach (string item in Splitlist)
+	        {
+                List<string> Splittmp = new List<string>();
+                Splittmp = item.Split(';');
+                Karten Splittmp= new Karten() { Lebenspunkte = 50, attack1 = 20, attack2 = 20 };
+	        }
 
 
 
