@@ -1,6 +1,6 @@
 # Kartenspiel
 
-Moritz und nicht Osman
+Moritz
 Yu-Gi-OH! - Meme - Kartenspiel
 
 Konzept:
