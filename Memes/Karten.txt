@@ -11,4 +11,4 @@ Trap,T-Series,Legendary,Gold,8,T-Series used to Pirate songs then they used Subb
 Fighter,Ricardo Milos,Legendary,Gold,8,Ricardo Milos is irresistable.,Ricardo makes you gay with his charm.,Ricardo gives you a too strong hug.,50,40,20
 ;
 Fighter,Micheal Jackson,Legendary,Gold,8,Micheal Jackson likes to he hee and kids also he makes good songs.,Micheal he hees very loud.,Micheal does the moonwalk.,30,30,30
-;
+
