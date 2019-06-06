@@ -1,9 +1,15 @@
-//cardtype,Name,Rarity,RarityColor,Strength,Description,A1Description,A2Description,attack1,attack2,Lebenspunkte
 Fighter,Shaggy,Legendary,Gold,10,Shaggy is the strongest Avenger by using the Power of Scooby Snacks.,Shaggy eats a Scooby Snack and gets super stronk and attacks you!,You steal Shaggys Scooby Snack and Shaggy gets super pissed and attacks you,30,30,50
+;
 Fighter,Matt,Legendary,Gold,9,Matt plays a lot of Wii.,Matt throws a Tennis Ball at you.,Matt kicks you.,25,30,45
+;
 Magic,Trump,Legendary,Gold,9,Trump already as a kid liked to build Walls and he respects whamen.,Nobody is better than Trump at knowing the bible he heales you with bibles,Nobody is better than Trump at building walls he builds a wall for your defense.,30,30,0
+;
 Fighter,Big Chungus,Legendary,Gold,8,Big Chungus is fat Buxbunny.He is as big as the Universe because he ate it.,Big Chungus eats you.,Big Chungus rolls over you.,5,15,80
+;
 Trap,T-Series,Legendary,Gold,8,T-Series used to Pirate songs then they used Subbots to get Nr.1 Youtuber.,Subbots eat you from inside.,T-Series destroys your ears with terrible music.,40,50,0
+;
 Fighter,Ricardo Milos,Legendary,Gold,8,Ricardo Milos is irresistable.,Ricardo makes you gay with his charm.,Ricardo gives you a too strong hug.,50,40,20
+;
 Fighter,Micheal Jackson,Legendary,Gold,8,Micheal Jackson likes to he hee and kids also he makes good songs.,Micheal he hees very loud.,Micheal does the moonwalk.,30,30,30
 
+;
