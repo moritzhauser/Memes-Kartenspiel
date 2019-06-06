@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fighter.cs" />
     <Compile Include="Karten.cs" />
+    <Compile Include="KartenAusgabe.cs" />
+    <Compile Include="Magic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spieler.cs" />

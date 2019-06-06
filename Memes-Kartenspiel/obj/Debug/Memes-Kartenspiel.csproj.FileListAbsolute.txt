@@ -12,3 +12,9 @@ C:\Users\mhaus\Downloads\Memes-Kartenspiel-master (3)\Memes-Kartenspiel-master\M
 C:\Users\mhaus\Downloads\Memes-Kartenspiel-master (3)\Memes-Kartenspiel-master\Memes-Kartenspiel\obj\Debug\Memes-Kartenspiel.csproj.CoreCompileInputs.cache
 C:\Users\mhaus\Downloads\Memes-Kartenspiel-master (3)\Memes-Kartenspiel-master\Memes-Kartenspiel\obj\Debug\Memes-Kartenspiel.exe
 C:\Users\mhaus\Downloads\Memes-Kartenspiel-master (3)\Memes-Kartenspiel-master\Memes-Kartenspiel\obj\Debug\Memes-Kartenspiel.pdb
+C:\Users\mhaus\Downloads\Memes-Kartenspiel-master (4)\Memes-Kartenspiel-master\Memes-Kartenspiel\bin\Debug\Memes-Kartenspiel.exe.config
+C:\Users\mhaus\Downloads\Memes-Kartenspiel-master (4)\Memes-Kartenspiel-master\Memes-Kartenspiel\bin\Debug\Memes-Kartenspiel.exe
+C:\Users\mhaus\Downloads\Memes-Kartenspiel-master (4)\Memes-Kartenspiel-master\Memes-Kartenspiel\bin\Debug\Memes-Kartenspiel.pdb
+C:\Users\mhaus\Downloads\Memes-Kartenspiel-master (4)\Memes-Kartenspiel-master\Memes-Kartenspiel\obj\Debug\Memes-Kartenspiel.csproj.CoreCompileInputs.cache
+C:\Users\mhaus\Downloads\Memes-Kartenspiel-master (4)\Memes-Kartenspiel-master\Memes-Kartenspiel\obj\Debug\Memes-Kartenspiel.exe
+C:\Users\mhaus\Downloads\Memes-Kartenspiel-master (4)\Memes-Kartenspiel-master\Memes-Kartenspiel\obj\Debug\Memes-Kartenspiel.pdb

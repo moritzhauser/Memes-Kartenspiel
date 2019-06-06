@@ -101,7 +101,7 @@ namespace Memes_Kartenspiel
             string[] Splitlist = allesdatei.Split(';');
             foreach (string item in Splitlist)
             {
-                string[] Splittmp = item.Split(',');//cardtype,Name,Rarity,RarityColor,Strength,Description,A1Description,A2Description,Attack1,Attack2,Lebenspunkte
+                string[] Splittmp = item.Split(',');//cardtype,Name,Rarity,RarityColor,Strength,Description,A1Description,A2Description,Attack1,Attack2,Lebenspunkte,FighterSkill,MagicSkill,TrapSkill
                 Console.WriteLine(item.Split(',')[1]);
                 Console.ReadLine();
                 //index Fehler
@@ -113,7 +113,31 @@ namespace Memes_Kartenspiel
                 //Convert RarityColor string to ConsoleColor
                 Karten abc = new Karten() { cardtype = Splittmp[0], Name = Splittmp[1], Rarity = Splittmp[2], RarityColor = Splittmp[3], Strength = strength, Description = Splittmp[5], A1Description = Splittmp[6], A2Description = Splittmp[7], Attack1 = attack1, Attack2 = attack2, Lebenspunkte = lebenspunkte, Photopath = "x" };
                 Spieldeck.Add(abc);
+
+                //Kartennamen und Skillwert ausgeben
+                if (Splittmp[0] == "Fighter")
+                {
+                    Fighter Fightera = new Fighter() { Name = Splittmp[1], FighterSkill = Splittmp[11] };
+                    Console.WriteLine(Fightera.Name + Fightera.FighterSkill);
+                }
+
+                else if (Splittmp[0] == "Magic")
+                {
+                    Magic Magica = new Magic() { Name = Splittmp[1], MagicSkill = Splittmp[12] };
+                    Console.WriteLine(Magica.Name + Magica.MagicSkill);
+                }
+                else if (Splittmp[0] == "Trap")
+                {
+                    Trap Trapa = new Trap() { Name = Splittmp[1], TrapSkill = Splittmp[13] };
+                    Console.WriteLine(Trapa.Name + Trapa.TrapSkill);
+                }
+                else
+                    throw new Exception("Falscher oder kein Kartentyp angegeben");
+                
+
             }
+
+           
 
             Console.WriteLine(Spieldeck.Count);
 
@@ -433,6 +457,7 @@ namespace Memes_Kartenspiel
                
 
                     System.IO.File.WriteAllText(@"../../../Memes/Gewinner.txt", realtext1);
+
                 }
                 else Console.WriteLine(Spieler1.Name + " keine Leben mehr " + Spieler2.Name + " hat gewonnen");
          
