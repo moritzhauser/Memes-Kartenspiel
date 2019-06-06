@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Memes_Kartenspiel
 {
@@ -16,8 +17,70 @@ namespace Memes_Kartenspiel
             List<Karten> SpielfeldP1 = new List<Karten>();
             List<Karten> SpielfeldP2 = new List<Karten>();
 
-            Spieler Spieler1 = new Spieler() { Spielerleben = 50, };
-            Spieler Spieler2 = new Spieler() { Spielerleben = 50, };
+            //nameneingabe fuer spieler
+            Console.WriteLine("Spieler 1 Name:");
+            string Name1 = Console.ReadLine();
+            Console.WriteLine("Spieler 2 Name:");
+            string Name2 = Console.ReadLine();
+            Spieler Spieler1 = new Spieler() { Spielerleben = 50, Name = Name1 };
+            Spieler Spieler2 = new Spieler() { Spielerleben = 50, Name = Name1 };
+
+            //regex einbauen
+            string input1 = Name1;
+            string input2 = Name2; ;
+            //if name = beginnt mit a = 1
+            string pattern1 = @"([a-iA-I]*)";
+            string pattern2 = @"([i-rA-R]*)";
+            string pattern3 = @"([r-zR-Z]*)";
+
+           
+            Match S1match1 = Regex.Match(input1, pattern1);
+            Match S1match2 = Regex.Match(input1, pattern2);
+            Match S1match3 = Regex.Match(input1, pattern3);
+            Match S2match1 = Regex.Match(input2, pattern1);
+            Match S2match2 = Regex.Match(input2, pattern2);
+            Match S2match3 = Regex.Match(input2, pattern3);
+
+
+            //realtext erstellen der 3 Teile vom Alphabet und den Namen ausgiebt
+            string realtext1;
+            string S1text1 = S1match1 + "a";
+            if (S1text1.Length != 1)
+            {
+                realtext1 = S1text1;
+            }
+            string S1text2 = S1match2 + "b";
+            if (S1text1.Length != 1)
+            {
+                realtext1 = S1text2;
+            }
+            string S1text3 = S1match3 + "c";
+            if (S1text1.Length != 1)
+            {
+                realtext1 = S1text3;
+            }
+            else
+                throw new System.ArgumentException("Falsche Zeichen eingegeben");
+
+
+            string realtext2;
+            string S2text1 = S2match1 + "a";
+            if (S2text1.Length != 1)
+            {
+                realtext2 = S2text1;
+            }
+            string S2text2 = S2match2 + "b";
+            if (S2text1.Length != 1)
+            {
+                realtext2 = S2text2;
+            }
+            string S2text3 = S2match3 + "c";
+            if (S2text1.Length != 1)
+            {
+                realtext2 = S2text3;
+            }
+            else
+                throw new System.ArgumentException("Falsche Zeichen eingegeben");
 
 
 
@@ -39,15 +102,16 @@ namespace Memes_Kartenspiel
             foreach (string item in Splitlist)
             {
                 string[] Splittmp = item.Split(',');//cardtype,Name,Rarity,RarityColor,Strength,Description,A1Description,A2Description,Attack1,Attack2,Lebenspunkte
-                Console.WriteLine(Splittmp.Length);
+                Console.WriteLine(item.Split(',')[1]);
                 Console.ReadLine();
                 //index Fehler
+                Console.WriteLine(Splittmp.Length);
                 int strength = Convert.ToInt32(Splittmp[4]);
                 int attack1 = Convert.ToInt32(Splittmp[8]);
                 int attack2 = Convert.ToInt32(Splittmp[9]);
                 int lebenspunkte = Int32.Parse(Splittmp[10]);
                 //Convert RarityColor string to ConsoleColor
-                Karten abc = new Karten() { cardtype = Splittmp[0], Name = Splittmp[1], Rarity = Splittmp[2], RarityColor = Splittmp[3], Strength = strength, Description = Splittmp[5], A1Description = Splittmp[6], A2Description = Splittmp[7], Attack1 = attack1, Attack2 = attack2, Lebenspunkte = lebenspunkte };
+                Karten abc = new Karten() { cardtype = Splittmp[0], Name = Splittmp[1], Rarity = Splittmp[2], RarityColor = Splittmp[3], Strength = strength, Description = Splittmp[5], A1Description = Splittmp[6], A2Description = Splittmp[7], Attack1 = attack1, Attack2 = attack2, Lebenspunkte = lebenspunkte, Photopath = "x" };
                 Spieldeck.Add(abc);
             }
 
@@ -365,9 +429,15 @@ namespace Memes_Kartenspiel
 
                         Zug();
                     }
-                    else Console.WriteLine("Spieler 2 keine Leben mehr Spieler1 hat gewonnen");
+                    else Console.WriteLine(Spieler2.Name + " keine Leben mehr "+ Spieler1.Name + " hat gewonnen");
+               
+
+                    System.IO.File.WriteAllText(@"../../../Memes/Gewinner.txt", realtext1);
                 }
-                else Console.WriteLine("Spieler 1 keine Leben mehr Spieler2 hat gewonnen");
+                else Console.WriteLine(Spieler1.Name + " keine Leben mehr " + Spieler2.Name + " hat gewonnen");
+         
+
+                System.IO.File.WriteAllText(@"../../../Memes/Karten.txt", realtext2);
             }
 
 
@@ -408,17 +478,6 @@ namespace Memes_Kartenspiel
 
 
 
-
-/*Rest
-int Spieler1lebenspunkte = 20;
-Thanos.Lebenspunkte = 30;
-Thanos.Attack1 = 20;
-
-
-
-int Spieler2lebenspunkte = 20;
-Matt.Lebenspunkte = 50;
-Matt.Attack1 = 40;*/
 
 
 

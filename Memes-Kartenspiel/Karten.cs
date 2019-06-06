@@ -20,13 +20,9 @@ namespace Memes_Kartenspiel
         public string A2Description { get; set; }
         public int Attack1 { get; set; }
         public int Attack2 { get; set; }
+        public string Photopath { get; set; }
 
-        //Fighter
+        //Fighter only
         public int Lebenspunkte { get; set; }
-        
-
-        //Magic
-
-        //Trap
     }
 }

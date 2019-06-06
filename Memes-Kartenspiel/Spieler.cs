@@ -11,6 +11,8 @@ namespace Memes_Kartenspiel
         public int Spielerleben { get; set; }
         public List<Karten> Deck { get; set; }
         public List<Karten> Hand { get; set; }
-        
-}
+        public string Name { get; set; }
+        public string NameRegex { get; set; }
+
+    }
 }
