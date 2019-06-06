@@ -1,0 +1,7 @@
+C:\Users\hauser.m02\Downloads\Memes-Kartenspiel-master\Memes-Kartenspiel\obj\Debug\Memes-Kartenspiel.csprojAssemblyReference.cache
+C:\Users\hauser.m02\Downloads\Memes-Kartenspiel-master\Memes-Kartenspiel\obj\Debug\Memes-Kartenspiel.csproj.CoreCompileInputs.cache
+C:\Users\hauser.m02\Downloads\Memes-Kartenspiel-master\Memes-Kartenspiel\bin\Debug\Memes-Kartenspiel.exe.config
+C:\Users\hauser.m02\Downloads\Memes-Kartenspiel-master\Memes-Kartenspiel\bin\Debug\Memes-Kartenspiel.exe
+C:\Users\hauser.m02\Downloads\Memes-Kartenspiel-master\Memes-Kartenspiel\bin\Debug\Memes-Kartenspiel.pdb
+C:\Users\hauser.m02\Downloads\Memes-Kartenspiel-master\Memes-Kartenspiel\obj\Debug\Memes-Kartenspiel.exe
+C:\Users\hauser.m02\Downloads\Memes-Kartenspiel-master\Memes-Kartenspiel\obj\Debug\Memes-Kartenspiel.pdb

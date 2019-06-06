@@ -23,25 +23,40 @@ namespace Memes_Kartenspiel
 
 
             //Karten erstellen machen wir dann aus Dateien
-
-            Karten Thanos = new Karten() { Lebenspunkte = 50, attack1 = 20, attack2 = 20 };//prozent von Gegner leben zb
-            string allesdatei; //=aus datei lesen 
-            List<string> Splitlist = new List<string>();
-            Splitlist = allesdatei.Split(' ');
-            foreach (string item in Splitlist)
-	        {
-                List<string> Splittmp = new List<string>();
-                Splittmp = item.Split(';');
-                Karten Splittmp= new Karten() { Lebenspunkte = 50, attack1 = 20, attack2 = 20 };
-	        }
-
+            string path = @"../../../Memes/Karten.txt";
 
 
 
             //Karten zum Spieldeck
             List<Karten> Spieldeck = new List<Karten>();
 
-            Spieldeck.Add(Thanos);
+
+
+
+            //Karten Thanos = new Karten() { Lebenspunkte = 50, Attack1 = 20, Attack2 = 20 };//prozent von Gegner leben zb
+            string allesdatei = System.IO.File.ReadAllText(path);     
+            string[] Splitlist = allesdatei.Split(';');
+            foreach (string item in Splitlist)
+            {
+                string[] Splittmp = item.Split(',');//cardtype,Name,Rarity,RarityColor,Strength,Description,A1Description,A2Description,Attack1,Attack2,Lebenspunkte
+                Console.WriteLine(Splittmp.Length);
+                Console.ReadLine();
+                //index Fehler
+                int strength = Convert.ToInt32(Splittmp[4]);
+                int attack1 = Convert.ToInt32(Splittmp[8]);
+                int attack2 = Convert.ToInt32(Splittmp[9]);
+                int lebenspunkte = Int32.Parse(Splittmp[10]);
+                //Convert RarityColor string to ConsoleColor
+                Karten abc = new Karten() { cardtype = Splittmp[0], Name = Splittmp[1], Rarity = Splittmp[2], RarityColor = Splittmp[3], Strength = strength, Description = Splittmp[5], A1Description = Splittmp[6], A2Description = Splittmp[7], Attack1 = attack1, Attack2 = attack2, Lebenspunkte = lebenspunkte };
+                Spieldeck.Add(abc);
+            }
+
+            Console.WriteLine(Spieldeck.Count);
+
+
+            
+
+            
  
 
             //Zahl berechnen wieviele Karten insgesamt für Spieler, immer gerade 
@@ -188,7 +203,7 @@ namespace Memes_Kartenspiel
                     {
                         if (y1 == 0)
                         {
-                            SpielfeldP2[z1].Lebenspunkte -= SpielfeldP1[x1].attack1;
+                            SpielfeldP2[z1].Lebenspunkte -= SpielfeldP1[x1].Attack1;
                             if (SpielfeldP2[z1].Lebenspunkte > 0) { Console.WriteLine("Deine Karte lebt noch"); }
                             else if (SpielfeldP2[z1].Lebenspunkte < 0)
                             {
@@ -198,7 +213,7 @@ namespace Memes_Kartenspiel
                         }
                         else
                         {
-                            SpielfeldP1[z1].Lebenspunkte -= SpielfeldP1[x1].attack2;
+                            SpielfeldP1[z1].Lebenspunkte -= SpielfeldP1[x1].Attack2;
                             if (SpielfeldP2[z1].Lebenspunkte > 0) { Console.WriteLine("Deine Karte lebt noch"); }
                             else if (SpielfeldP2[z1].Lebenspunkte < 0)
                             {
@@ -213,17 +228,17 @@ namespace Memes_Kartenspiel
                     {
                         if (y1 == 0)
                         {
-                            SpielfeldP2[z1].Lebenspunkte *= SpielfeldP1[x1].attack1;
+                            SpielfeldP2[z1].Lebenspunkte *= SpielfeldP1[x1].Attack1;
                             Console.WriteLine("Deine Karte wurde um"
-                                + SpielfeldP1[x1].attack1 * SpielfeldP2[z1].Lebenspunkte + "geschaedigt");
+                                + SpielfeldP1[x1].Attack1 * SpielfeldP2[z1].Lebenspunkte + "geschaedigt");
 
 
                         }
                         else
                         {
-                            SpielfeldP1[z1].Lebenspunkte *= SpielfeldP1[x1].attack2;
+                            SpielfeldP1[z1].Lebenspunkte *= SpielfeldP1[x1].Attack2;
                             Console.WriteLine("Deine Karte wurde um"
-                                + SpielfeldP1[x1].attack1 * SpielfeldP2[z1].Lebenspunkte + "geschaedigt");
+                                + SpielfeldP1[x1].Attack1 * SpielfeldP2[z1].Lebenspunkte + "geschaedigt");
 
                         }
                     }
@@ -233,17 +248,17 @@ namespace Memes_Kartenspiel
                     {
                         if (y1 == 0)
                         {
-                            SpielfeldP2[z1].Lebenspunkte *= SpielfeldP1[x1].attack1;
+                            SpielfeldP2[z1].Lebenspunkte *= SpielfeldP1[x1].Attack1;
                             Console.WriteLine("Deine Karte wurde um"
-                                + SpielfeldP1[x1].attack1 * SpielfeldP2[z1].Lebenspunkte + "geheilt");
+                                + SpielfeldP1[x1].Attack1 * SpielfeldP2[z1].Lebenspunkte + "geheilt");
                             //if xz1 = x1 return dazu geben
 
                         }
                         else
                         {
-                            SpielfeldP1[x1].Lebenspunkte *= SpielfeldP1[x1].attack2;
+                            SpielfeldP1[x1].Lebenspunkte *= SpielfeldP1[x1].Attack2;
                             Console.WriteLine("Deine Karte wurde um"
-                                + SpielfeldP1[x1].attack1 * SpielfeldP2[z1].Lebenspunkte + "geheilt");
+                                + SpielfeldP1[x1].Attack1 * SpielfeldP2[z1].Lebenspunkte + "geheilt");
 
                         }
                     }
@@ -255,7 +270,7 @@ namespace Memes_Kartenspiel
                     {
                         if (y1 == 0)
                         {
-                            SpielfeldP2[z1].Lebenspunkte -= SpielfeldP1[x1].attack1;
+                            SpielfeldP2[z1].Lebenspunkte -= SpielfeldP1[x1].Attack1;
                             if (SpielfeldP2[z1].Lebenspunkte > 0) { Console.WriteLine("Deine Karte lebt noch"); }
                             else if (SpielfeldP2[z1].Lebenspunkte < 0)
                             {
@@ -265,7 +280,7 @@ namespace Memes_Kartenspiel
                         }
                         else
                         {
-                            SpielfeldP1[z1].Lebenspunkte -= SpielfeldP1[x1].attack2;
+                            SpielfeldP1[z1].Lebenspunkte -= SpielfeldP1[x1].Attack2;
                             if (SpielfeldP2[z1].Lebenspunkte > 0) { Console.WriteLine("Deine Karte lebt noch"); }
                             else if (SpielfeldP2[z1].Lebenspunkte < 0)
                             {
@@ -280,17 +295,17 @@ namespace Memes_Kartenspiel
                     {
                         if (y1 == 0)
                         {
-                            SpielfeldP2[z1].Lebenspunkte *= SpielfeldP1[x1].attack1;
+                            SpielfeldP2[z1].Lebenspunkte *= SpielfeldP1[x1].Attack1;
                             Console.WriteLine("Deine Karte wurde um"
-                                + SpielfeldP1[x1].attack1 * SpielfeldP2[z1].Lebenspunkte + "geschaedigt");
+                                + SpielfeldP1[x1].Attack1 * SpielfeldP2[z1].Lebenspunkte + "geschaedigt");
 
 
                         }
                         else
                         {
-                            SpielfeldP1[z1].Lebenspunkte *= SpielfeldP1[x1].attack2;
+                            SpielfeldP1[z1].Lebenspunkte *= SpielfeldP1[x1].Attack2;
                             Console.WriteLine("Deine Karte wurde um"
-                                + SpielfeldP1[x1].attack1 * SpielfeldP2[z1].Lebenspunkte + "geschaedigt");
+                                + SpielfeldP1[x1].Attack1 * SpielfeldP2[z1].Lebenspunkte + "geschaedigt");
 
                         }
                     }
@@ -300,17 +315,17 @@ namespace Memes_Kartenspiel
                     {
                         if (y1 == 0)
                         {
-                            SpielfeldP2[z1].Lebenspunkte *= SpielfeldP1[x1].attack1;
+                            SpielfeldP2[z1].Lebenspunkte *= SpielfeldP1[x1].Attack1;
                             Console.WriteLine("Deine Karte wurde um"
-                                + SpielfeldP1[x1].attack1 * SpielfeldP2[z1].Lebenspunkte + "geheilt");
+                                + SpielfeldP1[x1].Attack1 * SpielfeldP2[z1].Lebenspunkte + "geheilt");
                             //if xz1 = x1 return dazu geben
 
                         }
                         else
                         {
-                            SpielfeldP1[x1].Lebenspunkte *= SpielfeldP1[x1].attack2;
+                            SpielfeldP1[x1].Lebenspunkte *= SpielfeldP1[x1].Attack2;
                             Console.WriteLine("Deine Karte wurde um"
-                                + SpielfeldP1[x1].attack1 * SpielfeldP2[z1].Lebenspunkte + "geheilt");
+                                + SpielfeldP1[x1].Attack1 * SpielfeldP2[z1].Lebenspunkte + "geheilt");
 
                         }
                     }
@@ -397,13 +412,13 @@ namespace Memes_Kartenspiel
 /*Rest
 int Spieler1lebenspunkte = 20;
 Thanos.Lebenspunkte = 30;
-Thanos.attack1 = 20;
+Thanos.Attack1 = 20;
 
 
 
 int Spieler2lebenspunkte = 20;
 Matt.Lebenspunkte = 50;
-Matt.attack1 = 40;*/
+Matt.Attack1 = 40;*/
 
 
 
